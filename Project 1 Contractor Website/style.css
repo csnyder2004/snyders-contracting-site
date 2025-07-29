@@ -132,7 +132,7 @@ body {
 }
 
 .footer-buttons button {
-  flex: 1 1 45%;
+  flex: 45%;
   padding: 15px;
   font-size: 1rem;
   background-color: var(--primary);
@@ -142,6 +142,7 @@ body {
   box-shadow: var(--shadow);
   cursor: pointer;
   transition: background 0.2s ease-in-out;
+  width: 400px
 }
 
 .footer-buttons button:hover {
