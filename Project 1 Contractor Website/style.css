@@ -266,3 +266,18 @@ input:focus, textarea:focus {
 .nav-bar a:hover {
   text-decoration: underline;
 }
+a.primary-btn {
+  display: inline-block;
+  text-align: center;
+  background: var(--primary);
+  color: white;
+  padding: 12px;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  width: 200px;
+}
+a.primary-btn:hover {
+  background: #005fa3;
+}

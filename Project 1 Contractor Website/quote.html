@@ -1,14 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Request a Quote - Snyder's Contracting LLC</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav class="nav-bar">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="quote.html">Quote</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+  </nav>
+
   <header class="top-bar">
     <h1>Snyder's Contracting LLC</h1>
     <p>Your trusted partner in building and renovation.</p>
@@ -20,27 +27,27 @@
       <form>
         <div>
           <label for="project-type">Project Type</label>
-          <input type="text" id="project-type" name="project-type" placeholder="e.g. Kitchen Remodel, New Home Build" required />
+          <input type="text" id="project-type" name="project-type" placeholder="e.g. Kitchen Remodel, New Home Build" required>
         </div>
 
         <div>
           <label for="timeline">Preferred Timeline</label>
-          <input type="text" id="timeline" name="timeline" placeholder="e.g. Fall 2025" required />
+          <input type="text" id="timeline" name="timeline" placeholder="e.g. Fall 2025" required>
         </div>
 
         <div>
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="John Doe" required />
+          <input type="text" id="name" name="name" placeholder="John Doe" required>
         </div>
 
         <div>
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
         </div>
 
         <div>
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" />
+          <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
         </div>
 
         <button class="primary-btn" onclick="submitQuote()">Submit Request</button>
@@ -49,13 +56,13 @@
   </main>
 
   <div class="quote-footer">
-    <a href="index.html"><button class="primary-btn">← Back to Home</button></a>
+    <a href="index.html" class="primary-btn">← Back to Home</a>
   </div>
+
   <script>
     function submitQuote() {
       alert("Your quote request has been submitted. We'll contact you soon!");
     }
   </script>
-
 </body>
 </html>
