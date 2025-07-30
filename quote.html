@@ -24,7 +24,7 @@
   <main>
     <div class="quote-form-container">
       <h2>Request a Project Quote</h2>
-      <form>
+      <form id="quote-form" onsubmit="return submitQuote(event)">
         <div>
           <label for="project-type">Project Type</label>
           <input type="text" id="project-type" name="project-type" placeholder="e.g. Kitchen Remodel, New Home Build" required>
@@ -50,7 +50,7 @@
           <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
         </div>
 
-        <button class="primary-btn" onclick="submitQuote()">Submit Request</button>
+        <button class="primary-btn" type="submit">Submit Request</button>
       </form>
     </div>
   </main>
@@ -60,8 +60,18 @@
   </div>
 
   <script>
-    function submitQuote() {
-      alert("Your quote request has been submitted. We'll contact you soon!");
+    function submitQuote(event) {
+      event.preventDefault();
+      const form = document.getElementById("quote-form");
+
+      if (form.checkValidity()) {
+        alert("Your quote request has been submitted. We'll contact you soon!");
+        form.reset();
+      } else {
+        alert("Please fill out all required fields before submitting your request.");
+      }
+
+      return false;
     }
   </script>
 </body>
