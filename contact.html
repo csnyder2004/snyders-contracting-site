@@ -24,7 +24,7 @@
   <main>
     <div class="contact-container">
       <h2>Send Us a Message</h2>
-      <form>
+      <form action="https://formspree.io/f/mkgzzgbn" method="POST" id="contact-form">
         <div>
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -39,8 +39,7 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="What would you like to ask?" required></textarea>
         </div>
-
-        <button class="primary-btn" onclick="submitContact()">Send Message</button>
+        <button class="primary-btn" type="submit">Send Message</button>
       </form>
     </div>
   </main>
@@ -48,11 +47,5 @@
   <div class="contact-footer">
     <a href="index.html" class="primary-btn">← Back to Home</a>
   </div>
-
-  <script>
-    function submitContact() {
-      alert("Thank you for reaching out! We'll respond to your message shortly.");
-    }
-  </script>
 </body>
 </html>

@@ -39,9 +39,20 @@
 
     <aside class="schedule-panel">
       <h2>Schedule a Time With Us</h2>
-      <p>Select a date for your onsite estimate:</p>
-      <input type="date">
-      <button class="primary-btn" onclick="submitAppointment()">Confirm Appointment</button>
+      <p>Select a date and enter your email for your onsite estimate:</p>
+      <form id="appointment-form" action="https://formspree.io/f/mkgzzgbn" method="POST" onsubmit="return validateAppointment()">
+        <div>
+          <label for="appointment-date">Preferred Date</label>
+          <input type="date" id="appointment-date" name="Appointment Date" required>
+        </div>
+        <div>
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="_replyto" placeholder="you@example.com" required>
+        </div>
+        <!-- Optional: redirect after submission -->
+        <!-- <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you.html"> -->
+        <button class="primary-btn" type="submit">Confirm Appointment</button>
+      </form>
     </aside>
   </main>
 
@@ -53,14 +64,14 @@
   </footer>
 
   <script>
-    function submitAppointment() {
-      const date = document.querySelector('input[type="date"]').value;
-
-      if (!date) {
-        alert("Please select a date before confirming.");
-      } else {
-        alert("Your appointment request for " + date + " has been submitted. We'll follow up with you shortly!");
+    function validateAppointment() {
+      const date = document.getElementById("appointment-date").value;
+      const email = document.getElementById("email").value;
+      if (!date || !email) {
+        alert("Please select a date and enter your email.");
+        return false;
       }
+      return true;
     }
   </script>
 </body>
