@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request a Quote - Snyder's Contracting LLC</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Projects - Snyder's Contracting LLC</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Navigation Bar -->
   <nav class="nav-bar">
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
@@ -16,63 +17,68 @@
     <a href="about.html">About</a>
   </nav>
 
+  <!-- Header -->
   <header class="top-bar">
-    <h1>Snyder's Contracting LLC</h1>
-    <p>Your trusted partner in building and renovation.</p>
+    <h1>Our Recent Projects</h1>
+    <p>A showcase of craftsmanship from Snyder's Contracting LLC</p>
   </header>
 
-  <main>
-    <div class="quote-form-container">
-      <h2>Request a Project Quote</h2>
-      <form id="quote-form" onsubmit="return submitQuote(event)">
-        <div>
-          <label for="project-type">Project Type</label>
-          <input type="text" id="project-type" name="project-type" placeholder="e.g. Kitchen Remodel, New Home Build" required>
-        </div>
+  <!-- Project Gallery -->
+  <main class="main-content">
+    <section class="project-gallery">
 
-        <div>
-          <label for="timeline">Preferred Timeline</label>
-          <input type="text" id="timeline" name="timeline" placeholder="e.g. Fall 2025" required>
-        </div>
+      <div class="project-card">
+        <img src="pictures/deck.jpg" alt="Custom Deck Project" />
+        <span class="label">Deck Build — Multi-level with Stairs</span>
+      </div>
 
-        <div>
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="John Doe" required>
-        </div>
+      <div class="project-card">
+        <img src="pictures/kitchencabinets.jpg" alt="Kitchen Remodel" />
+        <span class="label">Kitchen Remodel — Custom Cabinets</span>
+      </div>
 
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required>
-        </div>
+      <div class="project-card">
+        <img src="pictures/house.jpg" alt="Whole House" />
+        <span class="label">Full Home Renovation — Modern Exterior</span>
+      </div>
 
-        <div>
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
-        </div>
+      <div class="project-card">
+        <img src="pictures/deckstairs.jpg" alt="Covered Patio" />
+        <span class="label">Covered Patio — Cedar Frame + Firewood Storage</span>
+      </div>
 
-        <button class="primary-btn" type="submit">Submit Request</button>
-      </form>
-    </div>
+      <div class="project-card">
+        <img src="pictures/kitchen.jpg" alt="Farmhouse Kitchen" />
+        <span class="label">Farmhouse Kitchen — Subway Tile Backsplash</span>
+      </div>
+
+      <div class="project-card">
+        <img src="pictures/houseinterior.jpg" alt="Interior Overhaul" />
+        <span class="label">Interior Overhaul — Open Concept Living</span>
+      </div>
+
+      <div class="project-card">
+        <img src="pictures/barn.jpg" alt="Whole Barn" />
+        <span class="label">Barn Build — Roof Windows</span>
+      </div>
+
+      <div class="project-card">
+        <img src="pictures/bathroom.jpg" alt="Complete Remodel" />
+        <span class="label">Bathroom Remodel — Great Place to Read a Book</span>
+      </div>
+
+      <div class="project-card">
+        <img src="pictures/pool.jpg" alt="Whole Pool" />
+        <span class="label">Pool Installation — Stone Outline and Pad</span>
+      </div>
+
+    </section>
   </main>
 
-  <div class="quote-footer">
+  <!-- Footer -->
+  <footer class="footer-buttons">
     <a href="index.html" class="primary-btn">← Back to Home</a>
-  </div>
-
-  <script>
-    function submitQuote(event) {
-      event.preventDefault();
-      const form = document.getElementById("quote-form");
-
-      if (form.checkValidity()) {
-        alert("Your quote request has been submitted. We'll contact you soon!");
-        form.reset();
-      } else {
-        alert("Please fill out all required fields before submitting your request.");
-      }
-
-      return false;
-    }
-  </script>
+    <a href="quote.html" class="primary-btn">Request a Quote</a>
+  </footer>
 </body>
 </html>

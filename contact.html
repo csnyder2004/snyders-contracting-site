@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Metadata and head content -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Snyder's Contracting LLC</title>
+
+  <!-- Stylesheet and fonts -->
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation Bar -->
   <nav class="nav-bar">
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
@@ -16,34 +20,45 @@
     <a href="about.html">About</a>
   </nav>
 
+  <!-- Header Section -->
   <header class="top-bar">
     <h1>Contact Us</h1>
     <p>Have questions? Reach out and we'll get back to you as soon as possible.</p>
   </header>
 
+  <!-- Main Contact Form Section -->
   <main>
     <div class="contact-container">
       <h2>Send Us a Message</h2>
+
+      <!-- Contact Form using Formspree -->
       <form action="https://formspree.io/f/mkgzzgbn" method="POST" id="contact-form">
+
+        <!-- Name Field -->
         <div>
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" placeholder="Your Name" required>
         </div>
 
+        <!-- Email Field -->
         <div>
           <label for="email">Email Address</label>
           <input type="email" id="email" name="email" placeholder="you@example.com" required>
         </div>
 
+        <!-- Message Field -->
         <div>
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="What would you like to ask?" required></textarea>
         </div>
+
+        <!-- Submit Button -->
         <button class="primary-btn" type="submit">Send Message</button>
       </form>
     </div>
   </main>
 
+  <!-- Footer Section -->
   <div class="contact-footer">
     <a href="index.html" class="primary-btn">← Back to Home</a>
   </div>

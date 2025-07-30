@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Metadata and Head Section -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snyder's Contracting LLC</title>
+
+  <!-- Link to CSS and Google Fonts -->
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Navigation Bar -->
   <nav class="nav-bar">
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
@@ -16,12 +21,15 @@
     <a href="about.html">About</a>
   </nav>
 
+  <!-- Header / Hero Section -->
   <header class="top-bar">
     <h1>Snyder's Contracting LLC</h1>
     <p>Your trusted partner in building and renovation.</p>
   </header>
 
+  <!-- Main Content Area -->
   <main class="main-content">
+    <!-- Project Gallery Section -->
     <section class="project-gallery">
       <div class="project-card">
         <img src="pictures/deck.jpg" alt="Deck Project">
@@ -37,9 +45,11 @@
       </div>
     </section>
 
+    <!-- Schedule Appointment Form -->
     <aside class="schedule-panel">
       <h2>Schedule a Time With Us</h2>
       <p>Select a date and enter your email for your onsite estimate:</p>
+
       <form id="appointment-form" action="https://formspree.io/f/mkgzzgbn" method="POST" onsubmit="return validateAppointment()">
         <div>
           <label for="appointment-date">Preferred Date</label>
@@ -49,13 +59,15 @@
           <label for="email">Your Email</label>
           <input type="email" id="email" name="_replyto" placeholder="you@example.com" required>
         </div>
-        <!-- Optional: redirect after submission -->
+        <!-- Optional hidden redirect field -->
         <!-- <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you.html"> -->
+
         <button class="primary-btn" type="submit">Confirm Appointment</button>
       </form>
     </aside>
   </main>
 
+  <!-- Footer Buttons for Navigation -->
   <footer class="footer-buttons">
     <a href="quote.html" class="primary-btn">Request a Quote</a>
     <a href="projects.html" class="primary-btn">Browse Recent Projects</a>
@@ -63,6 +75,7 @@
     <a href="about.html" class="primary-btn">About Us</a>
   </footer>
 
+  <!-- Form Validation Script -->
   <script>
     function validateAppointment() {
       const date = document.getElementById("appointment-date").value;
